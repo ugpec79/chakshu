@@ -1042,7 +1042,7 @@ class WikipediaScraper:
                 latex = self.chem_in_math_element(latex)
 
                 latex = latex.replace("/", "//")
-                url = "http://localhost:8080/api"
+                url = "https://latex-to-text.vercel.app/api"
                 data = {"latexInput": latex}
                 response = requests.post(url, json=data)
                 text = "Math Equation"
